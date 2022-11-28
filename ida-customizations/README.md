@@ -78,8 +78,6 @@ customModules:
             path: /ida-course/0-blockchain-basics/1-blockchain.html
           - title: Golang
             path: /tutorials/4-golang-intro/1-install.html
-          - title: Docker introduction
-            path: /tutorials/5-docker-intro/1-overview.html
           - title: Good-to-know dev terms
             path: /tutorials/1-tech-terms/
           - title: Docker intro

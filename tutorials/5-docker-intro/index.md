@@ -1,13 +1,10 @@
 ---
-parent:
-  title: Docker Introduction
-  description: Know your way around Docker
-  number: 
 tags:
   - tutorial
   - dev-ops
 order: 0
 title: Docker Introduction
+description: Know your way around Docker
 ---
 
 <div class="tm-overline tm-rf-1 tm-lh-title tm-medium tm-muted">Know your way around Docker</div>
