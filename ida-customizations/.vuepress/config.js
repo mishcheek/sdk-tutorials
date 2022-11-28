@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   theme: "cosmos",
@@ -45,21 +45,21 @@ module.exports = {
       "script",
       {},
       `const userThemeMode = localStorage?.getItem("vuepress-theme-cosmos-user-theme") || 'dark-mode'
-      document.documentElement.className = userThemeMode`
+      document.documentElement.className = userThemeMode`,
     ],
     [
-      'script',
+      "script",
       {
         async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-KZ2X8K22XG',
+        src: "https://www.googletagmanager.com/gtag/js?id=G-KZ2X8K22XG",
       },
     ],
     [
-        'script',
-        {},
-        [
-          "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-KZ2X8K22XG');",
-        ],
+      "script",
+      {},
+      [
+        "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-KZ2X8K22XG');",
+      ],
     ],
   ],
   themeConfig: {
@@ -148,7 +148,11 @@ module.exports = {
                   title: "Good-To-Know Dev Terms",
                   path: "/tutorials/1-tech-terms/",
                 },
-              ]
+                {
+                  title: "Docker Introduction",
+                  path: "/tutorials/5-docker-intro/index.html",
+                },
+              ],
             },
           ],
         },
@@ -178,8 +182,7 @@ module.exports = {
     footer: {
       privacy: "https://v1.cosmos.network/privacy",
       question: {
-        text:
-          "Chat with Cosmos developers in <a href='https://discord.gg/cosmosnetwork' target='_blank'>Discord</a> or reach out on the <a href='https://forum.cosmos.network/c/cosmos-sdk' target='_blank'>SDK Developer Forum</a> to learn more.",
+        text: "Chat with Cosmos developers in <a href='https://discord.gg/cosmosnetwork' target='_blank'>Discord</a> or reach out in the <a href='https://forum.cosmos.network/c/cosmos-sdk' target='_blank'>SDK Developer Forum</a> to learn more.",
       },
       logo: "/brand.png",
       textLink: {
@@ -197,7 +200,7 @@ module.exports = {
         },
         {
           service: "discord",
-          url: "https://discord.gg/cosmosnetwork"
+          url: "https://discord.gg/cosmosnetwork",
         },
         {
           service: "linkedin",
@@ -214,7 +217,7 @@ module.exports = {
         {
           service: "youtube",
           url: "https://www.youtube.com/c/CosmosProject",
-        }
+        },
       ],
       smallprint:
         "† This website is maintained by the Interchain Foundation (ICF). The contents and opinions of this website are those of the ICF. The ICF provides links to cryptocurrency exchanges as a service to the public. The ICF does not warrant that the information provided by these websites is correct, complete, and up-to-date. The ICF is not responsible for their content and expressly rejects any liability for damages of any kind resulting from the use, reference to, or reliance on any information contained within these websites.",
@@ -269,14 +272,14 @@ module.exports = {
       ],
     },
     tags: {
-      'deep-dive': {
-        color: 'var(--color-secondary)',
-        label: 'Deep dive'
+      "deep-dive": {
+        color: "var(--color-secondary)",
+        label: "Deep dive",
       },
-      'fast-track': {
-        color: 'var(--color-primary)',
-        label: 'Fast track'
-      }
+      "fast-track": {
+        color: "var(--color-primary)",
+        label: "Fast track",
+      },
     },
     feedback: {
       formId: "xyylrkbl",
@@ -286,61 +289,77 @@ module.exports = {
       {
         title: "Cosmos SDK",
         description: "A framework to build application-specific blockchains",
-        links: [{
-          name: "Documentation",
-          url: "https://docs.cosmos.network/"
-        }],
-        image: "/cosmos-sdk-icon.svg"
+        links: [
+          {
+            name: "Documentation",
+            url: "https://docs.cosmos.network/",
+          },
+        ],
+        image: "/cosmos-sdk-icon.svg",
       },
       {
         title: "Tendermint Core",
         description: "Blockchain consensus engine and application interface",
-        links: [{
-          name: "Documentation",
-          url: "https://docs.tendermint.com/"
-        }],
-        image: "/tendermint-icon.svg"
+        links: [
+          {
+            name: "Documentation",
+            url: "https://docs.tendermint.com/",
+          },
+        ],
+        image: "/tendermint-icon.svg",
       },
       {
         title: "Cosmos Hub",
-        description: "First interconnected public blockchain on the Cosmos network",
-        links: [{
-          name: "Documentation",
-          url: "https://hub.cosmos.network/"
-        }],
-        image: "/generic-star-icon.svg"
+        description:
+          "First interconnected public blockchain on the Cosmos network",
+        links: [
+          {
+            name: "Documentation",
+            url: "https://hub.cosmos.network/",
+          },
+        ],
+        image: "/generic-star-icon.svg",
       },
       {
         title: "IBC",
-        description: "Industry standard protocol for inter-blockchain communication",
-        links: [{
-          name: "Documentation",
-          url: "https://ibc.cosmos.network/"
-        }],
-        image: "/ibc-icon.svg"
-      }
+        description:
+          "Industry standard protocol for inter-blockchain communication",
+        links: [
+          {
+            name: "Documentation",
+            url: "https://ibc.cosmos.network/",
+          },
+        ],
+        image: "/ibc-icon.svg",
+      },
     ],
     assetsOptimization: {
       breakpoints: [200, 600, 988, 1200],
-      blacklist: ['node_modules', '.vuepress/dist', '.vuepress/theme', '.vuepress/public/resized-images', '.vuepress/public/h5p']
-    }
+      blacklist: [
+        "node_modules",
+        ".vuepress/dist",
+        ".vuepress/theme",
+        ".vuepress/public/resized-images",
+        ".vuepress/public/h5p",
+      ],
+    },
   },
   plugins: [
     [
       "@vuepress/google-analytics",
       {
         ga: "UA-62891515-12",
-      }
+      },
     ],
     [
       "@vuepress/medium-zoom",
       {
         selector: ".layout__main__content :not(a) > img:not(.no-zoom)",
         options: {
-          background: "#000000"
-        }
-      }
-    ]
+          background: "#000000",
+        },
+      },
+    ],
   ],
   patterns: [
     "README.md",
@@ -353,6 +372,6 @@ module.exports = {
     "ida-course/*.md",
     "course-ida/*/*.md",
     "course-ida/*.md",
-    "hands-on-exercise/*/*.md"
-  ]
+    "hands-on-exercise/*/*.md",
+  ],
 };
